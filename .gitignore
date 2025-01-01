@@ -1,6 +1,7 @@
 node_modules/
 data.ms/
 dumps/
+dist/
 pnpm-lock.yaml
 
 # binary files

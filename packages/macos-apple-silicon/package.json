@@ -1,6 +1,6 @@
 {
   "name": "@gaubee/meilisearch-macos-apple-silicon",
-  "version": "1.12.0",
+  "version": "0.0.1-1.12.0",
   "exports": {
     "./package.json": "./package.json",
     "./meilisearch-macos-apple-silicon": "./meilisearch-macos-apple-silicon"
@@ -9,6 +9,18 @@
     "./package.json",
     "./meilisearch-macos-apple-silicon"
   ],
+  "keywords":  [
+    "meilisearch",
+    "server",
+    "sdk",
+    "cli"
+  ],
+  "author": "Gaubee",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaubee/meilisearch-sdk.git"
+  },
   "preferUnplugged": true,
   "os": [
     "darwin"

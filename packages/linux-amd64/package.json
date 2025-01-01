@@ -1,6 +1,6 @@
 {
   "name": "@gaubee/meilisearch-linux-amd64",
-  "version": "1.12.0",
+  "version": "0.0.1-1.12.0",
   "exports": {
     "./package.json": "./package.json",
     "./meilisearch-linux-amd64": "./meilisearch-linux-amd64"
@@ -9,6 +9,18 @@
     "./package.json",
     "./meilisearch-linux-amd64"
   ],
+  "keywords":  [
+    "meilisearch",
+    "server",
+    "sdk",
+    "cli"
+  ],
+  "author": "Gaubee",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaubee/meilisearch-sdk.git"
+  },
   "preferUnplugged": true,
   "os": [
     "linux"

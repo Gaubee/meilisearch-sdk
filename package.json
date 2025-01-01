@@ -1,5 +1,6 @@
 {
-  "name": "meilisearch-demo",
+  "private": true,
+  "name": "@gaubee/meilisearch",
   "version": "1.0.0",
   "type": "module",
   "description": "",
@@ -7,9 +8,18 @@
   "scripts": {
     "prepare:bin": "tsx scripts/prepare.ts"
   },
-  "keywords": [],
+  "keywords":  [
+    "meilisearch",
+    "server",
+    "sdk",
+    "cli"
+  ],
   "author": "Gaubee",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaubee/meilisearch-sdk.git"
+  },
   "devDependencies": {
     "@std/cli": "npm:@jsr/std__cli@^1.0.9",
     "@std/fmt": "npm:@jsr/std__fmt@^1.0.3",
