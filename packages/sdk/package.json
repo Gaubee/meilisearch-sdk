@@ -1,0 +1,12 @@
+{
+  "name": "@gaubee/meilisearch-sdk",
+  "version": "0.0.1",
+  "type": "module",
+  "optionalDependencies": {
+    "@gaubee/meilisearch-linux-aarch64": "1.12.0",
+    "@gaubee/meilisearch-linux-amd64": "1.12.0",
+    "@gaubee/meilisearch-macos-amd64": "1.12.0",
+    "@gaubee/meilisearch-macos-apple-silicon": "1.12.0",
+    "@gaubee/meilisearch-windows-amd64": "1.12.0"
+  }
+}

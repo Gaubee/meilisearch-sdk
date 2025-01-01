@@ -1,0 +1,19 @@
+{
+  "name": "@gaubee/meilisearch-linux-aarch64",
+  "version": "1.12.0",
+  "exports": {
+    "./package.json": "./package.json",
+    "./meilisearch-linux-aarch64": "./meilisearch-linux-aarch64"
+  },
+  "files": [
+    "./package.json",
+    "./meilisearch-linux-aarch64"
+  ],
+  "preferUnplugged": true,
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ]
+}

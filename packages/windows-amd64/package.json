@@ -1,0 +1,19 @@
+{
+  "name": "@gaubee/meilisearch-windows-amd64",
+  "version": "1.12.0",
+  "exports": {
+    "./package.json": "./package.json",
+    "./meilisearch-windows-amd64.exe": "./meilisearch-windows-amd64.exe"
+  },
+  "files": [
+    "./package.json",
+    "./meilisearch-windows-amd64.exe"
+  ],
+  "preferUnplugged": true,
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ]
+}

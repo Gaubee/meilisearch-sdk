@@ -1,0 +1,11 @@
+node_modules/
+data.ms/
+dumps/
+pnpm-lock.yaml
+
+# binary files
+meilisearch-linux-aarch64
+meilisearch-macos-amd64
+meilisearch-windows-amd64.exe
+meilisearch-macos-apple-silicon
+meilisearch-linux-amd64

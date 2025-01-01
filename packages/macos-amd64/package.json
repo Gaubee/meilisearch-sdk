@@ -1,0 +1,19 @@
+{
+  "name": "@gaubee/meilisearch-macos-amd64",
+  "version": "1.12.0",
+  "exports": {
+    "./package.json": "./package.json",
+    "./meilisearch-macos-amd64": "./meilisearch-macos-amd64"
+  },
+  "files": [
+    "./package.json",
+    "./meilisearch-macos-amd64"
+  ],
+  "preferUnplugged": true,
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ]
+}
