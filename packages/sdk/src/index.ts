@@ -117,13 +117,14 @@ export class MeilisearchSdk {
       commitSHA: "", // "ba11121cfc822438659ccb4120327c0c211a2796",
       commitDate: "", // "2024-12-12T17:16:53Z",
       version: "", // "1.12.0",
-      masterKey: Array.isArray(opts)
-        ? parseArgs({
-            args: opts,
-            options: { ["master-key"]: { type: "string" } },
-            strict: false,
-          })
-        : (opts.masterKey ?? ""),
+      masterKey:
+        (Array.isArray(opts)
+          ? (parseArgs({
+              args: opts,
+              options: { ["master-key"]: { type: "string" } },
+              strict: false,
+            }).values["master-key"] as string)
+          : opts.masterKey) ?? "",
       anonymousTelemetry: true,
       analyticsId: "",
     };
