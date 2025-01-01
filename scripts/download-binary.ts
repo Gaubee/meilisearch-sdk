@@ -22,11 +22,11 @@ export const doDownload = async (
   } = {}
 ) => {
   const binarys = [
-    // "meilisearch-linux-aarch64",
-    // "meilisearch-macos-amd64",
-    // "meilisearch-windows-amd64.exe",
-    // "meilisearch-macos-apple-silicon",
-    // "meilisearch-linux-amd64",
+    "meilisearch-linux-aarch64",
+    "meilisearch-macos-amd64",
+    "meilisearch-windows-amd64.exe",
+    "meilisearch-macos-apple-silicon",
+    "meilisearch-linux-amd64",
   ];
   const base = `https://github.com/meilisearch/meilisearch/releases/download/v1.12.0`;
   const proxy = "https://mirror.ghproxy.com/?q=";
