@@ -1,6 +1,6 @@
 import { deepEqual, equal } from "node:assert";
 import test from "node:test";
-import { MeilisearchSdk } from "../src/index";
+import { MeilisearchSdk } from "./index.js";
 test("version", () => {
   const sdk = new MeilisearchSdk();
   equal(sdk.version(), "1.12.0");

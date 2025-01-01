@@ -6,9 +6,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare:bin": "tsx scripts/prepare.ts"
+    "prepare:bin": "tsx scripts/prepare.ts",
+    "pub": "pnpm publish --access public -r"
   },
-  "keywords":  [
+  "keywords": [
     "meilisearch",
     "server",
     "sdk",
