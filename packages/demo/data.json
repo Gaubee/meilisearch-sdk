@@ -4,7 +4,12 @@
     "breedType": "purebred",
     "origin": "Canada, United States",
     "popularity": "1",
-    "temperament": ["开朗", "温柔", "友善", "聪明"],
+    "temperament": [
+      "开朗",
+      "温柔",
+      "友善",
+      "聪明"
+    ],
     "hypoallergenic": "否",
     "intelligence": 7,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -14,7 +19,12 @@
     "breedType": "纯种",
     "origin": "加拿大, 美国",
     "popularity": "1",
-    "temperament": ["开朗", "温柔", "友善", "聪明"],
+    "temperament": [
+      "开朗",
+      "温柔",
+      "友善",
+      "聪明"
+    ],
     "hypoallergenic": "否",
     "intelligence": 7,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -24,7 +34,12 @@
     "breedType": "纯种",
     "origin": "德国",
     "popularity": "2",
-    "temperament": ["勇敢", "聪明", "忠诚", "警惕"],
+    "temperament": [
+      "勇敢",
+      "聪明",
+      "忠诚",
+      "警惕"
+    ],
     "hypoallergenic": "否",
     "intelligence": 3,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -34,7 +49,12 @@
     "breedType": "纯种",
     "origin": "英国",
     "popularity": "3",
-    "temperament": ["聪明", "善良", "友善", "自信"],
+    "temperament": [
+      "聪明",
+      "善良",
+      "友善",
+      "自信"
+    ],
     "hypoallergenic": "否",
     "intelligence": 4,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -44,7 +64,13 @@
     "breedType": "纯种",
     "origin": "法国, 英国",
     "popularity": "4",
-    "temperament": ["顽皮", "善于交际", "友善", "活泼", "耐心"],
+    "temperament": [
+      "顽皮",
+      "善于交际",
+      "友善",
+      "活泼",
+      "耐心"
+    ],
     "hypoallergenic": "否",
     "intelligence": 58,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -54,7 +80,12 @@
     "breedType": "纯种",
     "origin": "英国",
     "popularity": "5",
-    "temperament": ["友善", "温顺", "固执", "合群"],
+    "temperament": [
+      "友善",
+      "温顺",
+      "固执",
+      "合群"
+    ],
     "hypoallergenic": "否",
     "intelligence": 77,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -64,7 +95,12 @@
     "breedType": "纯种",
     "origin": "英国",
     "popularity": "6",
-    "temperament": ["温柔", "聪明", "性格温和", "坚定"],
+    "temperament": [
+      "温柔",
+      "聪明",
+      "性格温和",
+      "坚定"
+    ],
     "hypoallergenic": "否",
     "intelligence": 72,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -74,7 +110,12 @@
     "breedType": "纯种",
     "origin": "德国, 法国",
     "popularity": "7",
-    "temperament": ["聪明", "忠诚", "容易训练", "本能强"],
+    "temperament": [
+      "聪明",
+      "忠诚",
+      "容易训练",
+      "本能强"
+    ],
     "hypoallergenic": "是",
     "intelligence": 2,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -84,7 +125,12 @@
     "breedType": "纯种",
     "origin": "德国",
     "popularity": "8",
-    "temperament": ["聪明", "勇敢", "无畏", "自信"],
+    "temperament": [
+      "聪明",
+      "勇敢",
+      "无畏",
+      "自信"
+    ],
     "hypoallergenic": "否",
     "intelligence": 9,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -94,7 +140,12 @@
     "breedType": "纯种",
     "origin": "德国",
     "popularity": "9",
-    "temperament": ["聪明", "容易训练", "精力充沛", "合作性强"],
+    "temperament": [
+      "聪明",
+      "容易训练",
+      "精力充沛",
+      "合作性强"
+    ],
     "hypoallergenic": "否",
     "intelligence": 9,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -104,7 +155,12 @@
     "breedType": "纯种",
     "origin": "英国",
     "popularity": "10",
-    "temperament": ["独立", "聪明", "勇敢", "自信"],
+    "temperament": [
+      "独立",
+      "聪明",
+      "勇敢",
+      "自信"
+    ],
     "hypoallergenic": "是",
     "intelligence": 27,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
@@ -114,16 +170,32 @@
     "breedType": "纯种",
     "origin": "德国",
     "popularity": "11",
-    "temperament": ["顽皮", "友善", "忠诚", "忠实"],
+    "temperament": [
+      "顽皮",
+      "友善",
+      "忠诚",
+      "忠实"
+    ],
     "hypoallergenic": "否",
     "intelligence": 48,
     "photo": "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
   },
   {
-    "title": "花香水仙"
+    "title": "花香水仙",
+    "data": {
+      "tag": [
+        "香水"
+      ]
+    }
   },
   {
-    "title": "香奈儿香水"
+    "title": "香奈儿X香水",
+    "data": {
+      "content": "奢侈品香水",
+      "tag": [
+        "香水"
+      ]
+    }
   },
   {
     "title": "爱马仕香水"

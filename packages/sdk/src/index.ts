@@ -311,7 +311,7 @@ type SdkOptions = {
    * [env: MEILI_HTTP_ADDR=]
    * [default: localhost:7700]
    */
-  httpAddr: number;
+  httpAddr: string;
   /**
    *
    * Sets the maximum size of accepted payloads. Value must be given in bytes or explicitly stating a base unit (for instance: 107374182400, '107.7Gb', or '107374 Mb')

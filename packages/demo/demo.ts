@@ -9,7 +9,19 @@ const client = new MeiliSearch({
   apiKey: "Vlkcr5-ssWqgc7b1d9SUzq5o_B8CQ8IZ9QxOmLq56XU",
 });
 
-const goodsIndex = client.index("goods-admin");
+const name = "goods-" + "admin"; // + crypto.randomUUID();
+while (true) {
+  const rawIndexes = await client.getRawIndexes();
+  console.log("rawIndexes", rawIndexes);
+  if (null == rawIndexes.results.find((it) => it.uid === name)) {
+    await client.createIndex(name);
+  } else {
+    break;
+  }
+}
+const goodsIndex = client.index(name);
+
+console.log("IndexStats", await goodsIndex.getStats());
 
 const addDocumentsResult = await goodsIndex.addDocuments(
   data.map((item, index) => ({ id: index, ...item }))
