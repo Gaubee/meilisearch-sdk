@@ -1,6 +1,6 @@
 {
   "name": "@gaubee/meilisearch-macos-amd64",
-  "version": "0.0.1-1.12.0",
+  "version": "1.0.0-v1.12.0",
   "exports": {
     "./package.json": "./package.json",
     "./meilisearch-macos-amd64": "./meilisearch-macos-amd64"
@@ -9,7 +9,7 @@
     "./package.json",
     "./meilisearch-macos-amd64"
   ],
-  "keywords":  [
+  "keywords": [
     "meilisearch",
     "server",
     "sdk",

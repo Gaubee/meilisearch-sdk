@@ -11,31 +11,41 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import * as colors from "@std/fmt/colors";
 
 import byteSize from "byte-size";
-import { doDownload } from "./download-binary.ts";
+import { doDownload, DownloadOptions } from "./download-binary.ts";
 
-const ProgressBar: React.FC<{ percent: number }> = ({ percent }) => {
-  const ref = useRef();
+const ProgressBar = ({ percent }: { percent: number }) => {
+  const ref = useRef<any>(null);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    if (ref.current) {
+      const { width: measuredWidth } = measureElement(ref.current);
+      setWidth(measuredWidth);
+    }
+  }, []); // Run once on mount
 
   let content = "";
-  if (ref.current) {
-    const { width, height } = measureElement(ref.current);
+  if (width > 0) {
     const loaded = Math.max(0, Math.round(percent * width));
     const rest = Math.max(0, width - loaded);
     content = colors.cyan("█".repeat(loaded) + "░".repeat(rest));
   }
-  // █░
 
   return (
-    <Box flexGrow={1} ref={ref as any}>
+    <Box flexGrow={1} height={1} ref={ref}>
       <Text>{content}</Text>
     </Box>
   );
 };
-const PanelView: React.FC<{
+const PanelView = ({
+  filename,
+  total,
+  loaded,
+}: {
   filename: string;
   total: number;
   loaded: number;
-}> = ({ filename, total, loaded }) => {
+}) => {
   const startTime = useMemo(() => Date.now(), []);
   const speed =
     byteSize(loaded / ((Date.now() - startTime) / 1000) || 0) + "/s";
@@ -60,7 +70,7 @@ const PanelView: React.FC<{
   );
 };
 
-const MainView = () => {
+const MainView = (props: DownloadOptions) => {
   const { exit } = useApp();
 
   useInput((input, key) => {
@@ -70,17 +80,18 @@ const MainView = () => {
   });
 
   const [filename, setFilename] = useState("");
-  const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState(1);
   const [loaded, setLoaded] = useState(0);
   useEffect(() => {
     const aborter = new AbortController();
     let download = 0;
     doDownload({
+      ...props,
       signal: aborter.signal,
       emitter: (state) => {
         if (state.type === "start") {
           setFilename(state.filename);
-          setTotal(state.total);
+          setTotal(state.total || 1);
           setLoaded((download = 0));
         } else if (state.type === "progress") {
           setLoaded((download += state.chunkSize));
@@ -96,6 +107,6 @@ const MainView = () => {
   );
 };
 
-export default function () {
-  render(<MainView />);
+export default function (opts: DownloadOptions) {
+  render(<MainView {...opts} />);
 }

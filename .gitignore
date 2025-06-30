@@ -10,3 +10,4 @@ meilisearch-macos-amd64
 meilisearch-windows-amd64.exe
 meilisearch-macos-apple-silicon
 meilisearch-linux-amd64
+.DS_Store

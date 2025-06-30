@@ -1,6 +1,6 @@
 {
   "name": "@gaubee/meilisearch-macos-apple-silicon",
-  "version": "0.0.1-1.12.0",
+  "version": "1.0.0-v1.12.0",
   "exports": {
     "./package.json": "./package.json",
     "./meilisearch-macos-apple-silicon": "./meilisearch-macos-apple-silicon"
@@ -9,7 +9,7 @@
     "./package.json",
     "./meilisearch-macos-apple-silicon"
   ],
-  "keywords":  [
+  "keywords": [
     "meilisearch",
     "server",
     "sdk",

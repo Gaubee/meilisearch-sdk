@@ -1,6 +1,6 @@
 {
   "name": "@gaubee/meilisearch-windows-amd64",
-  "version": "0.0.1-1.12.0",
+  "version": "1.0.0-v1.12.0",
   "exports": {
     "./package.json": "./package.json",
     "./meilisearch-windows-amd64.exe": "./meilisearch-windows-amd64.exe"
@@ -9,7 +9,7 @@
     "./package.json",
     "./meilisearch-windows-amd64.exe"
   ],
-  "keywords":  [
+  "keywords": [
     "meilisearch",
     "server",
     "sdk",

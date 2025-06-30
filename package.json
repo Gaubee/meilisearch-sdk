@@ -6,7 +6,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare:bin": "tsx scripts/prepare.ts",
+    "download": "tsx scripts/download-cli.ts",
     "pub": "pnpm publish --access public -r"
   },
   "keywords": [
@@ -15,6 +15,7 @@
     "sdk",
     "cli"
   ],
+  "packageManager": "pnpm@10.12.4",
   "author": "Gaubee",
   "license": "MIT",
   "repository": {
@@ -22,17 +23,20 @@
     "url": "git+https://github.com/gaubee/meilisearch-sdk.git"
   },
   "devDependencies": {
-    "@std/cli": "npm:@jsr/std__cli@^1.0.9",
-    "@std/fmt": "npm:@jsr/std__fmt@^1.0.3",
+    "@gaubee/nodekit": "^0.10.0",
+    "@std/cli": "jsr:^1.0.20",
+    "@std/fmt": "jsr:^1.0.8",
     "@types/byte-size": "^8.1.2",
-    "@types/node": "^22.10.2",
-    "@types/react": "^18.3.18",
+    "@types/node": "^24.0.7",
+    "@types/react": "^19.1.8",
+    "@types/yargs": "^17.0.32",
     "byte-size": "^9.0.1",
-    "execa": "^9.5.2",
-    "ink": "^5.1.0",
-    "prettier": "^3.4.2",
-    "react": "^18.0.0",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2"
+    "execa": "^9.6.0",
+    "ink": "^6.0.1",
+    "prettier": "^3.6.2",
+    "react": "^19.1.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "yargs": "^18.0.0"
   }
 }
