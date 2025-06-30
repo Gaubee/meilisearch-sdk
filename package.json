@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@gaubee/meilisearch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "",
   "main": "index.js",
@@ -15,6 +15,7 @@
     "sdk",
     "cli"
   ],
+  "meilisearchReleaseTag": "v1.15.2",
   "packageManager": "pnpm@10.12.4",
   "author": "Gaubee",
   "license": "MIT",

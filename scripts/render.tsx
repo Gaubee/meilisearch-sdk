@@ -50,6 +50,7 @@ const PanelView = ({
   const speed =
     byteSize(loaded / ((Date.now() - startTime) / 1000) || 0) + "/s";
   const totalByteResult = useMemo(() => byteSize(total, {}), [total]);
+  const percent = total === 0 ? 0 : loaded / total;
   return (
     <Box flexDirection="column" borderStyle="round" gap={1}>
       <Box flexDirection="row" gap={1}>
@@ -57,7 +58,7 @@ const PanelView = ({
         <Text color="gray">Speed: {colors.green(speed)}</Text>
       </Box>
       <Box flexDirection="row" justifyContent="space-between">
-        <ProgressBar percent={loaded / total} />
+        <ProgressBar percent={percent} />
         <Box marginLeft={1} minWidth={20} justifyContent="flex-end">
           <Text color="green">
             {byteSize(loaded, { precision: 1 }).toString()}
@@ -72,16 +73,17 @@ const PanelView = ({
 
 const MainView = (props: DownloadOptions) => {
   const { exit } = useApp();
-
   useInput((input, key) => {
     if (input === "c" && (key.ctrl || key.meta)) {
       exit();
     }
   });
 
-  const [filename, setFilename] = useState("");
+  let [filename, setFilename] = useState("");
   const [total, setTotal] = useState(1);
   const [loaded, setLoaded] = useState(0);
+  const [downloadedFiles, setDownloadedFiles] = useState<string[]>([]);
+  const [done, setDone] = useState(false);
   useEffect(() => {
     const aborter = new AbortController();
     let download = 0;
@@ -90,20 +92,39 @@ const MainView = (props: DownloadOptions) => {
       signal: aborter.signal,
       emitter: (state) => {
         if (state.type === "start") {
-          setFilename(state.filename);
-          setTotal(state.total || 1);
+          setFilename((filename = state.filename)); // filename 可能会被立刻使用，所以这里手动赋值
+          setTotal(state.total);
           setLoaded((download = 0));
         } else if (state.type === "progress") {
           setLoaded((download += state.chunkSize));
+          if (download >= total) {
+            setDownloadedFiles([...downloadedFiles, filename]);
+          }
         } else if (state.type === "done") {
-          exit();
+          setDone(true);
+          setTimeout(() => {
+            exit();
+          });
         }
       },
     });
     return () => aborter.abort("cancel");
   }, []);
   return (
-    <PanelView filename={filename} total={total} loaded={loaded}></PanelView>
+    <Box flexDirection="column" gap={1}>
+      {downloadedFiles.map((filename, i) => (
+        <Text key={i} color="gray">
+          ✅ File: {colors.blue(filename)}
+        </Text>
+      ))}
+      {done ? null : (
+        <PanelView
+          filename={filename}
+          total={total}
+          loaded={loaded}
+        ></PanelView>
+      )}
+    </Box>
   );
 };
 
