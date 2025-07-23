@@ -1,0 +1,28 @@
+{
+    "references": [
+        {
+            "path": "./packages/sdk/tsconfig.json"
+        }
+    ],
+    "compilerOptions": {
+        "module": "ESNext",
+        "noEmit": true,
+        "target": "esnext",
+        "lib": [
+            "esnext"
+        ],
+        "rootDir": "./",
+        "types": [
+            "node"
+        ],
+        "declaration": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "scripts",
+        "**/tsdown.config.ts"
+    ]
+}

@@ -6,6 +6,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "cd packages/sdk && tsdown && tsc --build",
+    "ts": "tsc --build",
     "download": "tsx scripts/download-cli.ts",
     "pub": "pnpm publish --access public -r"
   },
@@ -16,7 +18,7 @@
     "cli"
   ],
   "meilisearchReleaseTag": "v1.15.2",
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.13.1",
   "author": "Gaubee",
   "license": "MIT",
   "repository": {
@@ -35,7 +37,9 @@
     "execa": "^9.6.0",
     "ink": "^6.0.1",
     "prettier": "^3.6.2",
+    "prettier-plugin-organize-imports": "^4.2.0",
     "react": "^19.1.0",
+    "tsdown": "^0.13.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "yargs": "^18.0.0"

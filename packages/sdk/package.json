@@ -1,19 +1,20 @@
 {
   "name": "@gaubee/meilisearch-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "exports": {
     ".": {
       "import": {
-        "type": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
+        "type": "./bundle/index.d.ts",
+        "default": "./bundle/index.js"
       },
       "require": {
-        "type": "./dist/cjs/index.d.ts",
-        "default": "./dist/cjs/index.js"
+        "type": "./bundle/index.d.ts",
+        "default": "./bundle/index.cjs"
       }
     }
   },
+  "files": ["dist"],
   "keywords": [
     "meilisearch",
     "server",
