@@ -1,6 +1,6 @@
 {
   "name": "@gaubee/meilisearch-sdk",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "type": "module",
   "exports": {
     ".": {
@@ -14,7 +14,10 @@
       }
     }
   },
-  "files": ["dist"],
+  "files": [
+    "bundle",
+    "!**/*.tsbuildinfo"
+  ],
   "keywords": [
     "meilisearch",
     "server",
@@ -31,7 +34,7 @@
     "build": "tsc --build ./tsconfig.json"
   },
   "bin": {
-    "meilisearch": "./dist/esm/cli.js"
+    "meilisearch": "./bundle/cli.js"
   },
   "optionalDependencies": {
     "@gaubee/meilisearch-linux-aarch64": "workspace:*",

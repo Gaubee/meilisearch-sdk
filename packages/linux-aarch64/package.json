@@ -1,13 +1,13 @@
 {
   "name": "@gaubee/meilisearch-linux-aarch64",
-  "version": "1.0.1-v1.15.2",
+  "version": "1.1.0-1.15.2",
   "exports": {
     "./package.json": "./package.json",
-    "./meilisearch-linux-aarch64": "./meilisearch-linux-aarch64"
+    "./meilisearch": "./meilisearch"
   },
   "files": [
     "./package.json",
-    "./meilisearch-linux-aarch64"
+    "./meilisearch"
   ],
   "keywords": [
     "meilisearch",

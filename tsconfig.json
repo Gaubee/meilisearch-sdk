@@ -5,8 +5,6 @@
         }
     ],
     "compilerOptions": {
-        "module": "ESNext",
-        "noEmit": true,
         "target": "esnext",
         "lib": [
             "esnext"
@@ -15,6 +13,11 @@
         "types": [
             "node"
         ],
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
+        "resolveJsonModule": true,
+        "verbatimModuleSyntax": true,
+        "noEmit": true,
         "declaration": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
@@ -22,7 +25,7 @@
         "skipLibCheck": true
     },
     "include": [
-        "scripts",
+        "grab.config.ts",
         "**/tsdown.config.ts"
     ]
 }

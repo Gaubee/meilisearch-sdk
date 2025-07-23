@@ -1,15 +1,16 @@
 {
   "private": true,
   "name": "@gaubee/meilisearch",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "cd packages/sdk && tsdown && tsc --build",
     "ts": "tsc --build",
-    "download": "tsx scripts/download-cli.ts",
-    "pub": "pnpm publish --access public -r"
+    "download": "grab -i",
+    "pub": "pnpm publish --access public -r --no-git-checks",
+    "pub:sdk": "cd packages/sdk && pnpm publish --access public --no-git-checks"
   },
   "keywords": [
     "meilisearch",
@@ -26,6 +27,7 @@
     "url": "git+https://github.com/gaubee/meilisearch-sdk.git"
   },
   "devDependencies": {
+    "@gaubee/grab": "^1.1.0",
     "@gaubee/nodekit": "^0.10.0",
     "@std/cli": "jsr:^1.0.20",
     "@std/fmt": "jsr:^1.0.8",
