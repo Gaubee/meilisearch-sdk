@@ -1,6 +1,6 @@
 {
   "name": "@gaubee/meilisearch-linux-amd64",
-  "version": "1.1.0-1.15.2",
+  "version": "1.1.1-1.15.2",
   "exports": {
     "./package.json": "./package.json",
     "./meilisearch": "./meilisearch"
