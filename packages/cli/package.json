@@ -1,6 +1,6 @@
 {
-  "name": "@gaubee/meilisearch-sdk",
-  "version": "1.2.0",
+  "name": "@gaubee/meilisearch-cli",
+  "version": "1.1.1-1.15.2",
   "type": "module",
   "exports": {
     ".": {
@@ -16,7 +16,7 @@
   "keywords": [
     "meilisearch",
     "server",
-    "sdk"
+    "cli"
   ],
   "author": "Gaubee",
   "license": "MIT",
@@ -25,19 +25,16 @@
     "url": "git+https://github.com/gaubee/meilisearch-sdk.git"
   },
   "scripts": {
-    "test": "vitest",
     "build": "tsdown"
   },
-  "peerDependencies": {
-    "@gaubee/meilisearch-cli": "workspace:^"
+  "bin": {
+    "meilisearch": "./bundle/cli.js"
   },
-  "devDependencies": {
-    "@gaubee/meilisearch-cli": "workspace:^",
-    "zod": "^4.0.8"
-  },
-  "peerDependenciesMeta": {
-    "@gaubee/meilisearch-cli": {
-      "optional": true
-    }
+  "optionalDependencies": {
+    "@gaubee/meilisearch-linux-aarch64": "workspace:*",
+    "@gaubee/meilisearch-linux-amd64": "workspace:*",
+    "@gaubee/meilisearch-macos-amd64": "workspace:*",
+    "@gaubee/meilisearch-macos-apple-silicon": "workspace:*",
+    "@gaubee/meilisearch-windows-amd64": "workspace:*"
   }
 }

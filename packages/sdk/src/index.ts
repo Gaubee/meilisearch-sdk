@@ -1,13 +1,14 @@
 import { ChildProcess, spawn, spawnSync } from "node:child_process";
 import { parseArgs } from "node:util";
-import { resolveBindaryInfo } from "./binary.js";
+import { resolveBinaryPath } from "./binary.js";
 import type { SdkOptions } from "./options.js";
 export type { SdkOptions } from "./options.js";
 
 export class MeilisearchSdk {
-  info = resolveBindaryInfo();
+  binPath = resolveBinaryPath();
   version() {
-    return spawnSync(this.info.binPath, ["--version"], {
+    console.log("QAQ",this.binPath)
+    return spawnSync(this.binPath, ["--version"], {
       stdio: "pipe",
     })
       .stdout.toString()
@@ -40,7 +41,7 @@ export class MeilisearchSdk {
         }
       }
     }
-    const cp = spawn(this.info.binPath, args, {
+    const cp = spawn(this.binPath, args, {
       stdio: "pipe",
     });
 

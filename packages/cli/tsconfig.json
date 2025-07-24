@@ -9,7 +9,6 @@
     ],
     "verbatimModuleSyntax": true,
     "moduleResolution": "nodenext",
-    "resolveJsonModule": true,
     "rootDir": "./src",
     "outDir": "./bundle",
     "types": [

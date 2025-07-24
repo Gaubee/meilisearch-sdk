@@ -6,7 +6,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd packages/sdk && tsdown && tsc --build",
+    "build": "pnpm -r --parallel run build",
     "ts": "tsc --build",
     "download": "grab -i",
     "pub": "pnpm publish --access public -r --no-git-checks",
@@ -44,6 +44,7 @@
     "tsdown": "^0.13.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
+    "vitest": "^3.2.4",
     "yargs": "^18.0.0"
   }
 }
