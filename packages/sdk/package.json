@@ -1,6 +1,6 @@
 {
   "name": "@gaubee/meilisearch-sdk",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "type": "module",
   "exports": {
     ".": {
@@ -28,16 +28,10 @@
     "test": "vitest",
     "build": "tsdown"
   },
-  "peerDependencies": {
+  "dependencies": {
     "@gaubee/meilisearch-cli": "workspace:^"
   },
   "devDependencies": {
-    "@gaubee/meilisearch-cli": "workspace:^",
     "zod": "^4.0.8"
-  },
-  "peerDependenciesMeta": {
-    "@gaubee/meilisearch-cli": {
-      "optional": true
-    }
   }
 }

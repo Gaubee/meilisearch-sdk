@@ -6,6 +6,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "run:cli": "tsx packages/cli/src/cli.ts",
     "build": "pnpm -r --parallel run build",
     "ts": "tsc --build",
     "download": "grab -i",
