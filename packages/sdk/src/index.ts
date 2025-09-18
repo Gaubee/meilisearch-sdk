@@ -7,7 +7,6 @@ export type { SdkOptions } from "./options.js";
 export class MeilisearchSdk {
   binPath = resolveBinaryPath();
   version() {
-    console.log("QAQ",this.binPath)
     return spawnSync(this.binPath, ["--version"], {
       stdio: "pipe",
     })
@@ -34,10 +33,13 @@ export class MeilisearchSdk {
         const type = typeof value;
         if (type === "string") {
           args.push(param, value);
-        } else if (type === "number") {
+        } else if (type === "number" || type === "bigint") {
           args.push(param, String(value));
         } else if (type === "boolean") {
-          args.push(param);
+          // For boolean true, add the param. For false, do nothing.
+          if (value) {
+            args.push(param);
+          }
         }
       }
     }
